@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Core Online Tutorial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!-- The cdns have been added to where the tomcat container can find them. -->
+    <!-- The links go to cdn resources for the bootstrap css file. The Thymeleaf template
+    uses the path given here at runtime. When run in a browser the cdn resource is used. Under tomcat,
+    Thymeleaf engine finds the path to the cdn resource. -->
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <h1>Hello World</h1>
+
+    <h2>This is my Thymeleaf index page. It was rendered by the IndexController. The @RequestMapping told us what URL to go to for this page.</h2>
+
+</div>
+
+</body>
+</html>
